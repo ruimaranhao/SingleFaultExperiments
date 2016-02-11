@@ -36,8 +36,6 @@ die() {
   exit 1
 }
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-
 JAVA_VERSION=$(java -version 2>&1 | sed 's/java version "\(.*\)\.\(.*\)\..*"/\1\2/; 1q')
 echo "$JAVA_VERSION"
 if [[ "$JAVA_VERSION" != "17" ]]; then
